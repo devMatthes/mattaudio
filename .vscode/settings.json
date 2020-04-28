@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/fe983164-c50b-41b0-97eb-853749f106ca/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/MattAudio"
+}

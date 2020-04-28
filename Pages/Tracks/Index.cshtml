@@ -1,0 +1,83 @@
+@page
+@model mattaudio.Pages.Tracks.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form>
+    <p>
+        <select asp-for="TrackGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
+        <button type="sumbit">Filter</button>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Track[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Track[0].Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Track[0].Genre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Track) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                <div id="@item.VideoID"></div>
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.TrackID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.TrackID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.TrackID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@section Scripts {
+    <script type="text/javascript">
+        @foreach (var item in Model.Track)
+        {
+            <text>
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                function onYouTubeIframeAPIReady()
+                {
+                var player = new YT.Player('@item.VideoID', {
+                    height: '200',
+                    width: '200',
+                    videoId: '@item.VideoID',
+                    });
+                };
+            </text>
+        }
+        
+    </script>
+}
