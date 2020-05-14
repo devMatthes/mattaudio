@@ -20541,11 +20541,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/mnt/e/coding/net-core/mattaudio/Pages/Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/mnt/e/coding/net-core/mattaudio/Pages/Tracks/Index.cshtml",
       "TargetPath": "Pages\\Tracks\\Index.cshtml",
       "FileKind": "mvc"

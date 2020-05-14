@@ -15,19 +15,14 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Track.TrackID" />
             <div class="form-group">
+                <label asp-for="Track.Artist" class="control-label"></label>
+                <input asp-for="Track.Artist" class="form-control" />
+                <span asp-validation-for="Track.Artist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Track.Title" class="control-label"></label>
                 <input asp-for="Track.Title" class="form-control" />
                 <span asp-validation-for="Track.Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Track.Duration" class="control-label"></label>
-                <input asp-for="Track.Duration" class="form-control" />
-                <span asp-validation-for="Track.Duration" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Track.Genre" class="control-label"></label>
-                <input asp-for="Track.Genre" class="form-control" />
-                <span asp-validation-for="Track.Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

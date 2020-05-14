@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace mattaudio.Migrations
 {
@@ -13,9 +12,9 @@ namespace mattaudio.Migrations
                 {
                     TrackID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(nullable: true),
-                    Duration = table.Column<TimeSpan>(nullable: false),
-                    Genre = table.Column<string>(nullable: true)
+                    Title = table.Column<string>(nullable: false),
+                    Artist = table.Column<string>(nullable: false),
+                    VideoID = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -6,18 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using mattaudio.Data;
 using mattaudio.Models;
+using mattaudio.Pages;
 
 namespace mattaudio.Pages.Tracks
 {
     public class EditModel : PageModel
     {
         private readonly mattaudio.Data.mattaudioContext _context;
+        private readonly ILogger<EditModel> _logger;
 
-        public EditModel(mattaudio.Data.mattaudioContext context)
+        public EditModel(mattaudio.Data.mattaudioContext context, ILogger<EditModel> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [BindProperty]
@@ -27,6 +31,7 @@ namespace mattaudio.Pages.Tracks
         {
             if (id == null)
             {
+                _logger.LogError("Something gone wrong");
                 return NotFound();
             }
 
@@ -34,6 +39,7 @@ namespace mattaudio.Pages.Tracks
 
             if (Track == null)
             {
+                _logger.LogError("Something gone wrong");
                 return NotFound();
             }
             return Page();
@@ -54,7 +60,7 @@ namespace mattaudio.Pages.Tracks
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
                 if (!TrackExists(Track.TrackID))
                 {
@@ -62,6 +68,7 @@ namespace mattaudio.Pages.Tracks
                 }
                 else
                 {
+                    _logger.LogError(ex, "Something gone wrong");
                     throw;
                 }
             }

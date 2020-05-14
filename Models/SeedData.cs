@@ -21,9 +21,26 @@ namespace mattaudio.Models
                 context.Track.AddRange(
                     new Track
                     {
-                        Title = "Blabla",
-                        Duration = TimeSpan.Parse("00:02:45"),
-                        Genre = "Rap"
+                        Title = "PORTOFINO",
+                        Artist = "TUZZA Globale"
+                    },
+                    
+                    new Track
+                    {
+                        Title = "Moana",
+                        Artist = "G-Eazy, Jack Harlow"
+                    },
+
+                    new Track
+                    {
+                        Title = "0 To 100 / The Catch Up",
+                        Artist = "Drake"
+                    },
+
+                    new Track
+                    {
+                        Title = "JoHn Muir",
+                        Artist = "Schoolboy Q"
                     }
                 );
                 context.SaveChanges();

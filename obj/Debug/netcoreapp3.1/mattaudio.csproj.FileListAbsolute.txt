@@ -160,7 +160,6 @@
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/mattaudio.TagHelpers.output.cache
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/mattaudio.RazorCoreGenerate.cache
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs
-/mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/Razor/Pages/Privacy.cshtml.g.cs
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_Layout.cshtml.g.cs
 /mnt/e/coding/net-core/mattaudio/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_ValidationScriptsPartial.cshtml.g.cs

@@ -12,22 +12,16 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Track.Artist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Track.Artist)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Track.Title)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Track.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Track.Duration)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Track.Duration)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Track.Genre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Track.Genre)
         </dd>
     </dl>
 </div>

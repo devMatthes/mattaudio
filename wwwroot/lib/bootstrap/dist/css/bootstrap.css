@@ -58,9 +58,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: white;
   text-align: left;
-  background-color: #fff;
+  background-color: #262626;
 }
 
 [tabindex="-1"]:focus {
@@ -501,7 +501,13 @@ mark,
 
 .figure-caption {
   font-size: 90%;
-  color: #6c757d;
+  color: #F2F2F2;
+  font-weight: bold;
+}
+
+.figure-caption-artist {
+  font-size: 90%;
+  color: #A6A6A6;
 }
 
 code {
@@ -1508,7 +1514,7 @@ pre code {
   }
   .offset-xl-11 {
     margin-left: 91.666667%;
-  }
+  } 
 }
 
 .table {
@@ -4070,7 +4076,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: white;
   pointer-events: none;
   cursor: default;
 }
@@ -4101,7 +4107,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: gold;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -4118,7 +4124,7 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #595959;
   background-color: #007bff;
 }
 
