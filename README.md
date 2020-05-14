@@ -3,16 +3,19 @@
 
 ## Screenshots 📺
 
-**- Start page**
+- Start page
 
 <img src="https://raw.github.com/devMatthes/mattaudio/master/img/index.png" />
-**- Add page**
+
+- Add page
 
 <img src="https://raw.github.com/devMatthes/mattaudio/master/img/add.png" />
-**- Edit page**
+
+- Edit page
 
 <img src="https://raw.github.com/devMatthes/mattaudio/master/img/edit.png" />
-**- Delete page**
+
+- Delete page
 
 <img src="https://raw.github.com/devMatthes/mattaudio/master/img/delete.png" />
 
