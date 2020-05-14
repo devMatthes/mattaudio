@@ -54,7 +54,7 @@ namespace mattaudio.Pages.Tracks
 
             Track = await tracks.ToListAsync();
 
-            var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+            /*var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
                 //ApiKey = "AIzaSyAsGA59IPSi5JFapZk-zZ2sysoaUbAEGDs"
                 ApiKey = "AIzaSyCISgKX5TuyCAqmdEXzPC_ziS4QYNVm2ZA"
@@ -71,7 +71,7 @@ namespace mattaudio.Pages.Tracks
                 foreach (var searchResult in searchListResponse.Items){
                     x.VideoID = searchResult.Id.VideoId;
                 }
-            }
+            }*/
         }
     }
 }
